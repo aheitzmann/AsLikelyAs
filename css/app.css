@@ -50,9 +50,64 @@ body {
   background-color: purple;
 }
 
+.input_slider_table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  margin-bottom: 50px;
+  /* border: 1px solid black; */
+} 
+
+.input_slider { 
+  width: 100%;
+}
+
+.label_cell {
+  /* border: 1px solid black; */
+}
+
+.slider_cell {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
 #hello {
   color: white;
   text-align: center;
   font-size: 24px;
   padding: 100px;
 }
+
+#content_section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  border: 1px solid red;
+}
+
+#input_params_section {
+  width: 400px;
+  float: left;
+}
+
+#result_section {
+  display: table;
+  width: 400px;
+  float: right;
+}
+
+#area_scope_slider {
+}
+
+#event_size_slider {
+
+}
+
+#result {
+  border: 1px solid red;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
