@@ -464,6 +464,10 @@ $(document).ready(function() {
   inputChanged();
 });
 
+$(window).load(function() {
+  inputChanged();
+});
+
 function inputChanged() {
 	displayResult($("#area_scope_slider").val(), $("#event_size_slider").val());
 }
