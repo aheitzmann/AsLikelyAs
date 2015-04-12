@@ -119,9 +119,6 @@ h1 {
 #input_params_section {
   width: 300px;
   float: left;
-  border-right-width: 1px;
-  border-right-color: 646464;
-  border-right-style: dashed;
 }
 
 #area_scope_slider {
@@ -135,6 +132,10 @@ h1 {
   display: table;
   width: 640px;
   float: right;
+  border-left-width: 1px;
+  border-left-color: #979797;
+  border-left-style: dashed;
+  padding-left: 10px;
 }
 
 #result_section p {
