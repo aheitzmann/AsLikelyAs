@@ -501,14 +501,11 @@ function displayResult(scopeId, sizeId) {
   var probabilityImageCount = (probability_elements ? probability_elements.length : 0);
   var imageWidth = ($('#probability-images').width() - 60) / (probabilityImageCount + 1);
 
-  // display the cross product image
-  $('#crossproduct-image').attr('src', crossProduct.image).width(imageWidth);
-
   // function to show an image and set up the alt text, etc
-  function showImageWithProbability(imageElement, probability) {
-    imageElement.attr('src', probability.image).width(imageWidth);
-    if (probability.image_source) {
-      imageElement.attr('title', 'Source: ' + probability.image_source);
+  function showImage(imageElement, imageData) {
+    imageElement.attr('src', imageData.image).width(imageWidth);
+    if (imageData.image_source) {
+      imageElement.attr('title', 'Source: ' + imageData.image_source);
     }
     imageElement.show();
   }
@@ -519,9 +516,12 @@ function displayResult(scopeId, sizeId) {
     imageElement.removeAttr('title');
   }
 
+  // display the cross product image
+  showImage($('#crossproduct-image'), crossProduct);
+
   // show the first probability image if necessary
   if (probabilityImageCount > 0) {
-    showImageWithProbability($('#probability-image-0'), probability_elements[0]);
+    showImage($('#probability-image-0'), probability_elements[0]);
     $('#congruent').show();
   } else {
     hideImage($('#probability-image-0'));
@@ -530,7 +530,7 @@ function displayResult(scopeId, sizeId) {
 
   // show the second probability image if necessary
   if (probabilityImageCount > 1) {
-    showImageWithProbability($('#probability-image-1'), probability_elements[1]);
+    showImage($('#probability-image-1'), probability_elements[1]);
     $('#plus').show();
   } else {
     hideImage($('#probability-image-1'));
@@ -539,7 +539,7 @@ function displayResult(scopeId, sizeId) {
 
   /* show "what if?" text (crossproduct) */
 
-  $('#outcome').html(crossProduct.text);
+  $('#outcome').html(crossProduct.text || 'Well, I guess we don\'t know!');
 
   // add sources
   var sourceLinks = _.chain(crossProduct.text_sources).filter().map(function(source, i) {
