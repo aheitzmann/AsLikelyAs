@@ -19,7 +19,7 @@ var probabilities = [
     "probability":0.6,
     "category":"name",
     "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html",
-    "image source":"http://pixabay.com/p-149866/?no_redirect",
+    "image_source":"http://pixabay.com/p-149866/?no_redirect",
     "image": "images/probz/named-after-relative.png"
   },
   {
@@ -27,7 +27,7 @@ var probabilities = [
     "probability":0.5,
     "category":"",
     "source":"",
-    "image source":"http://nesterko.com/lectures/stat221-2012/lecture13/coinflip.gif",
+    "image_source":"http://nesterko.com/lectures/stat221-2012/lecture13/coinflip.gif",
     "image": "images/probz/coinflip.gif"
   },
   {
@@ -35,7 +35,7 @@ var probabilities = [
     "probability":0.144,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"https://translate.google.com/",
+    "image_source":"https://translate.google.com/",
     "image": "images/probz/mandarin.png"
   },
   {
@@ -43,7 +43,7 @@ var probabilities = [
     "probability":0.1428571429,
     "category":"time",
     "source":"",
-    "image source":"http://pixabay.com/p-460676/?no_redirect",
+    "image_source":"http://pixabay.com/p-460676/?no_redirect",
     "image": "images/probz/saturday.png"
   },
   {
@@ -51,7 +51,7 @@ var probabilities = [
     "probability":0.1,
     "category":"",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/flu.png"
   },
   {
@@ -59,7 +59,7 @@ var probabilities = [
     "probability":0.059,
     "category":"",
     "source":"http://www.businessinsider.com/things-harder-than-getting-to-harvard-2014-9",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/harvard.png"
   },
   {
@@ -67,7 +67,7 @@ var probabilities = [
     "probability":0.032,
     "category":"",
     "source":"http://sites.la.utexas.edu/twinproject/facts-and-figures/",
-    "image source":"https://openclipart.org/image/300px/svg_to_png/152503/Petroglyph-Twins.png",
+    "image_source":"https://openclipart.org/image/300px/svg_to_png/152503/Petroglyph-Twins.png",
     "image": "images/probz/twins.png"
   },
   {
@@ -75,7 +75,7 @@ var probabilities = [
     "probability":0.0125,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"https://translate.google.com/",
+    "image_source":"https://translate.google.com/",
     "image": "images/probz/javanese.png"
   },
   {
@@ -83,7 +83,7 @@ var probabilities = [
     "probability":0.005,
     "category":"",
     "source":"http://en.wikipedia.org/wiki/Budget_of_NASA",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/nasa.png"
   },
   {
@@ -91,7 +91,7 @@ var probabilities = [
     "probability":0.002739726027,
     "category":"",
     "source":"",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/same-birthday.png"
   },
   {
@@ -99,7 +99,7 @@ var probabilities = [
     "probability":0.002739726027,
     "category":"time",
     "source":"",
-    "image source":"http://pixabay.com/p-460676/?no_redirect",
+    "image_source":"http://pixabay.com/p-460676/?no_redirect",
     "image": "images/probz/pi-day.png"
   },
   {
@@ -107,7 +107,7 @@ var probabilities = [
     "probability":0.002,
     "category":"",
     "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/11-fingers.png"
   },
   {
@@ -115,7 +115,7 @@ var probabilities = [
     "probability":0.001872659176,
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/heart-disease.png"
   },
   {
@@ -123,7 +123,7 @@ var probabilities = [
     "probability":0.0013,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"http://www.omniglot.com/language/phrases/quechua.php",
+    "image_source":"http://www.omniglot.com/language/phrases/quechua.php",
     "image": "images/probz/quechua.png"
   },
   {
@@ -131,7 +131,7 @@ var probabilities = [
     "probability":0.0013,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"https://translate.google.com/",
+    "image_source":"https://translate.google.com/",
     "image": "images/probz/swedish.png"
   },
   {
@@ -139,7 +139,7 @@ var probabilities = [
     "probability":0.0006844626968,
     "category":"time",
     "source":"",
-    "image source":"http://pixabay.com/p-460676/?no_redirect",
+    "image_source":"http://pixabay.com/p-460676/?no_redirect",
     "image": "images/probz/feb-29.png"
   },
   {
@@ -147,7 +147,7 @@ var probabilities = [
     "probability":0.0006329113924,
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg/728px-Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg/728px-Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg",
     "image": "images/probz/surgery.jpg"
   },
   {
@@ -155,7 +155,7 @@ var probabilities = [
     "probability":0.000126984127,
     "category":"death",
     "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/dead-at-home.png"
   },
   {
@@ -163,7 +163,7 @@ var probabilities = [
     "probability":0.0001212436709,
     "category":"name",
     "source":"http://www.statista.com/statistics/279713/frequent-combinations-of-first-and-last-name-in-the-us/",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/james-smith.png"
   },
   {
@@ -171,7 +171,7 @@ var probabilities = [
     "probability":0.000101556962,
     "category":"name",
     "source":"http://www.statista.com/statistics/279713/frequent-combinations-of-first-and-last-name-in-the-us/",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/maria-garcia.png"
   },
   {
@@ -179,7 +179,7 @@ var probabilities = [
     "probability":0.00005673758865,
     "category":"death",
     "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php",
-    "image source":"https://openclipart.org/image/300px/svg_to_png/94567/car-accident.png",
+    "image_source":"https://openclipart.org/image/300px/svg_to_png/94567/car-accident.png",
     "image": "images/probz/car-accident.png"
   },
   {
@@ -187,7 +187,7 @@ var probabilities = [
     "probability":0.000007582075972,
     "category":"death",
     "source":"http://www.livescience.com/3780-odds-dying.html",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/9/9f/Valdivia_after_earthquake,_1960.jpg",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/9/9f/Valdivia_after_earthquake,_1960.jpg",
     "image": "images/probz/earthquake.jpg"
   },
   {
@@ -195,7 +195,7 @@ var probabilities = [
     "probability":0.000007024987882,
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/9/96/ShadowRidgeRoadFire.JPG",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/9/96/ShadowRidgeRoadFire.JPG",
     "image": "images/probz/house-fire.jpg"
   },
   {
@@ -203,7 +203,7 @@ var probabilities = [
     "probability":0.000002822315484,
     "category":"death",
     "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/3/33/JRM_Marshall_Mars_burning_5Apr1950.jpg",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/3/33/JRM_Marshall_Mars_burning_5Apr1950.jpg",
     "image": "images/probz/plane-crash.jpg"
   },
   {
@@ -211,7 +211,7 @@ var probabilities = [
     "probability":0.000001934423058,
     "category":"death",
     "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php",
-    "image source":"",
+    "image_source":"",
     "image": "images/probz/falling-out-of-building.png"
   },
   {
@@ -219,7 +219,7 @@ var probabilities = [
     "probability":0.000001539077169,
     "category":"",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/1/10/Royal_flush.JPG",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/1/10/Royal_flush.JPG",
     "image": "images/probz/royal-flush.jpg"
   },
   {
@@ -227,7 +227,7 @@ var probabilities = [
     "probability":0.000001510574018,
     "category":"",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/a/a7/Olympic_flag.svg",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/a/a7/Olympic_flag.svg",
     "image": "images/probz/olympics.svg"
   },
   {
@@ -235,7 +235,7 @@ var probabilities = [
     "probability":1e-7,
     "category":"career",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg",
     "image": "images/probz/presideng.svg"
   },
   {
@@ -243,7 +243,7 @@ var probabilities = [
     "probability":7.575757576e-8,
     "category":"career",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/2/24/Astronaut-EVA_edit3.png",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/2/24/Astronaut-EVA_edit3.png",
     "image": "images/probz/astronaut.png"
   },
   {
@@ -251,7 +251,7 @@ var probabilities = [
     "probability":5e-8,
     "category":"saint",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/d/dc/Saint_Peter_the_Aleut.jpg",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/d/dc/Saint_Peter_the_Aleut.jpg",
     "image": "images/probz/saint2.jpg"
   },
   {
@@ -259,7 +259,7 @@ var probabilities = [
     "probability":7.399409468e-9,
     "category":"",
     "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you",
-    "image source":"https://farm3.staticflickr.com/2440/3856718374_77d28f4f1d_o.jpg",
+    "image_source":"https://farm3.staticflickr.com/2440/3856718374_77d28f4f1d_o.jpg",
     "image": "images/probz/lottery.jpg"
   },
   {
@@ -267,7 +267,7 @@ var probabilities = [
     "probability":3.333333333e-9,
     "category":"death",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/7/79/Tiger_shark_drawing.svg",
+    "image_source":"http://upload.wikimedia.org/wikipedia/commons/7/79/Tiger_shark_drawing.svg",
     "image": "images/probz/shark.svg"
   },
   {
@@ -275,7 +275,7 @@ var probabilities = [
     "probability":1.857142857e-9,
     "category":"death",
     "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html",
-    "image source":"https://c1.staticflickr.com/1/187/483187235_3ecb3f307b.jpg",
+    "image_source":"https://c1.staticflickr.com/1/187/483187235_3ecb3f307b.jpg",
     "image": "images/probz/vending-machine.jpg"
   }
 ];
@@ -499,22 +499,35 @@ function displayResult(scopeId, sizeId) {
   // display the cross product image
   $('#crossproduct-image').attr('src', crossProduct.image).width(imageWidth);
 
+  // show an image and set up the alt text, etc
+  function showImageWithProbability(imageElement, probability) {
+    imageElement.attr('src', probability.image).width(imageWidth);
+    if (probability.image_source) {
+      imageElement.attr('title', 'Source: ' + probability.image_source);
+    }
+    imageElement.show();
+  }
+
+  // hide and reset the image
+  function hideImage(imageElement) {
+    imageElement.hide();
+    imageElement.removeAttr('title');
+  }
+
   // show the remaining images
   if (probabilityImageCount > 0) {
-    $('#probability-image-0').show();
-    $('#probability-image-0').attr('src', probability_elements[0].image).width(imageWidth);
+    showImageWithProbability($('#probability-image-0'), probability_elements[0]);
     $('#congruent').show();
   } else {
-    $('#probability-image-0').hide();
+    hideImage($('#probability-image-0'));
     $('#congruent').hide();
   }
 
   if (probabilityImageCount > 1) {
-    $('#probability-image-1').show();
-    $('#probability-image-1').attr('src', probability_elements[1].image).width(imageWidth);
+    showImageWithProbability($('#probability-image-1'), probability_elements[1]);
     $('#plus').show();
   } else {
-    $('#probability-image-1').hide();
+    hideImage($('#probability-image-1'));
     $('#plus').hide();
   }
 
