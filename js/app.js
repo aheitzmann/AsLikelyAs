@@ -420,13 +420,13 @@ function getProbabilityNear(target, similarity) {
 
   var similar = [];
 
-  _.each(probabilities, function(probability1) {
+  _.each(probabilities, function(probability1, index1) {
     if (between(probability1.probability, low, high)) {
       similar.push([probability1]);
     }
 
-    _.each(probabilities, function(probability2) {
-      if (probability1 == probability2) return;
+    _.each(probabilities, function(probability2, index2) {
+      if (index2 <= index1) return;
       if (probability1.category != "" && probability1.category == probability2.category) return;
 
       var combined_prob = probability1.probability * probability2.probability;
