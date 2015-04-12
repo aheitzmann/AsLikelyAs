@@ -493,8 +493,30 @@ function displayResult(scopeId, sizeId) {
 
 
   // show images
-  $('#crossproduct-image').attr('src', crossProduct.image).width(300);
+  var probabilityImageCount = (probability_elements ? probability_elements.length : 0);
+  var imageWidth = ($('#probability-images').width() - 60) / (probabilityImageCount + 1);
 
+  // display the cross product image
+  $('#crossproduct-image').attr('src', crossProduct.image).width(imageWidth);
+
+  // show the remaining images
+  if (probabilityImageCount > 0) {
+    $('#probability-image-0').show();
+    $('#probability-image-0').attr('src', probability_elements[0].image).width(imageWidth);
+    $('#congruent').show();
+  } else {
+    $('#probability-image-0').hide();
+    $('#congruent').hide();
+  }
+
+  if (probabilityImageCount > 1) {
+    $('#probability-image-1').show();
+    $('#probability-image-1').attr('src', probability_elements[1].image).width(imageWidth);
+    $('#plus').show();
+  } else {
+    $('#probability-image-1').hide();
+    $('#plus').hide();
+  }
 
   // show crossproduct text
   $('#outcome').html(crossProduct.text);
