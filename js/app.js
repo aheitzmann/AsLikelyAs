@@ -207,21 +207,25 @@ var scopes = [
   {
     'id': SCOPE_EARTH,
     'name': 'earth',
+    'description': 'any place on earth',
     'percent': 1.0
   },
   {
     'id': SCOPE_POPULATED,
     'name': 'populated earth',
+    'description': 'anywhere populated',
     'percent': 0.029
   },
   {
     'id': SCOPE_METRO,
     'name': 'metro',
+    'description': 'an urban area',
     'percent': 0.0087
   },
   {
     'id': SCOPE_ME,
     'name': 'me',
+    'description': 'you',
     'percent': 0.0000000019607843
   }
 ];
@@ -231,16 +235,19 @@ var sizes = [
   {
     'id': SIZE_REACHED_GROUND,
     'name': 'meteorite',
+    'description': 'a meteorite',
     'number_per_year': 10950.0
   },
   {
     'id': SIZE_CHELYABINSK,
     'name': 'Chelyabinsk',
+    'description': 'an airburst like the Chelyabinsk event',
     'number_per_year': 0.03333333333
   },
   {
     'id': SIZE_TUNGUSKA,
     'name': 'Tunguska',
+    'description': 'a meteorite like the Tunguska event',
     'number_per_year': 0.001
   }
 ];
@@ -250,7 +257,62 @@ var crossProducts = [
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_REACHED_GROUND,
-    'text': 'These are some interesting facts!'
+    'text': 'a'
+  },
+  {
+    'scope_id': SCOPE_EARTH,
+    'size_id': SIZE_CHELYABINSK,
+    'text': 'b'
+  },
+  {
+    'scope_id': SCOPE_EARTH,
+    'size_id': SIZE_TUNGUSKA,
+    'text': 'c'
+  },
+  {
+    'scope_id': SCOPE_POPULATED,
+    'size_id': SIZE_REACHED_GROUND,
+    'text': 'd'
+  },
+  {
+    'scope_id': SCOPE_POPULATED,
+    'size_id': SIZE_CHELYABINSK,
+    'text': 'e'
+  },
+  {
+    'scope_id': SCOPE_POPULATED,
+    'size_id': SIZE_TUNGUSKA,
+    'text': 'f'
+  },
+  {
+    'scope_id': SCOPE_METRO,
+    'size_id': SIZE_REACHED_GROUND,
+    'text': 'g'
+  },
+  {
+    'scope_id': SCOPE_METRO,
+    'size_id': SIZE_CHELYABINSK,
+    'text': 'h'
+  },
+  {
+    'scope_id': SCOPE_METRO,
+    'size_id': SIZE_TUNGUSKA,
+    'text': 'i'
+  },
+  {
+    'scope_id': SCOPE_ME,
+    'size_id': SIZE_REACHED_GROUND,
+    'text': 'j'
+  },
+  {
+    'scope_id': SCOPE_ME,
+    'size_id': SIZE_CHELYABINSK,
+    'text': 'k'
+  },
+  {
+    'scope_id': SCOPE_ME,
+    'size_id': SIZE_TUNGUSKA,
+    'text': 'l'
   }
 ];
 
@@ -292,6 +354,19 @@ function displayResult(scopeId, sizeId) {
 
   // fill in text
   p.html(crossProduct.text);
+  p.html(getProbabilityComparisonText(scope, size, [probabilities[0]]));
+}
+
+function getProbabilityComparisonText(scope, size, probability_examples) {
+  var text = 'The chance that ' +
+              size.description +
+              ' will impact ' +
+              scope.description +
+              ' is about the same as the chance ';
+  _.each(probability_examples, function(example) {
+    text = text + example.text;
+  });
+  return text;
 }
 
 /* DB functions and stuff */
