@@ -485,6 +485,8 @@ function displayResult(scopeId, sizeId) {
 
   /* show text in probability paragraph */
   var probabilityElement = $('#probability');
+  probabilityElement.empty(); // fix for missing drop cap (first letter)
+
   if (size.id == SIZE_AUDIBLE && scope.id != SCOPE_ME) {
     probabilityElement.html(getAudibleMeteorText(scope, size));
   } else {
