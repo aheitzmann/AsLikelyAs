@@ -19,238 +19,264 @@ var probabilities = [
     "probability":0.6,
     "category":"name",
     "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html",
-    "image source":"http://pixabay.com/p-149866/?no_redirect"
+    "image source":"http://pixabay.com/p-149866/?no_redirect",
+    "image": "images/probz/named-after-relative.png"
   },
   {
     "text":"that you'll flip heads in a coin flip",
     "probability":0.5,
     "category":"",
     "source":"",
-    "image source":"http://nesterko.com/lectures/stat221-2012/lecture13/coinflip.gif"
+    "image source":"http://nesterko.com/lectures/stat221-2012/lecture13/coinflip.gif",
+    "image": "images/probz/coin-flip.gif"
   },
   {
     "text":"that you are a native speaker of Mandarin",
     "probability":0.144,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"https://translate.google.com/"
+    "image source":"https://translate.google.com/",
+    "image": "images/probz/mandarin.png"
   },
   {
     "text":"that today is Saturday",
     "probability":0.1428571429,
     "category":"time",
     "source":"",
-    "image source":"http://pixabay.com/p-460676/?no_redirect"
-  },
-  {
-    "text":"that you will die of heart disease",
-    "probability":0.1428571429,
-    "category":"death",
-    "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
-    "image source":""
+    "image source":"http://pixabay.com/p-460676/?no_redirect",
+    "image": "images/probz/saturday.png"
   },
   {
     "text":"that you will get flu this year",
     "probability":0.1,
     "category":"",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/flu.png"
   },
   {
     "text":"that your application to Harvard will be accepted",
     "probability":0.059,
     "category":"",
     "source":"http://www.businessinsider.com/things-harder-than-getting-to-harvard-2014-9",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/harvard.png"
   },
   {
     "text":"that you are a twin",
     "probability":0.032,
     "category":"",
     "source":"http://sites.la.utexas.edu/twinproject/facts-and-figures/",
-    "image source":"https://openclipart.org/image/300px/svg_to_png/152503/Petroglyph-Twins.png"
+    "image source":"https://openclipart.org/image/300px/svg_to_png/152503/Petroglyph-Twins.png",
+    "image": "images/probz/twins.png"
   },
   {
     "text":"that you are a native speaker of Javanese",
     "probability":0.0125,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"https://translate.google.com/"
+    "image source":"https://translate.google.com/",
+    "image": "images/probz/javanese.png"
   },
   {
     "text":"that a dollar you paid in tax went to NASA",
     "probability":0.005,
     "category":"",
     "source":"http://en.wikipedia.org/wiki/Budget_of_NASA",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/nasa.png"
   },
   {
     "text":"that a random person has the same birthday as you",
     "probability":0.002739726027,
     "category":"",
     "source":"",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/same-birthday.png"
   },
   {
     "text":"that today is Pi day",
     "probability":0.002739726027,
     "category":"time",
     "source":"",
-    "image source":"http://pixabay.com/p-460676/?no_redirect"
+    "image source":"http://pixabay.com/p-460676/?no_redirect",
+    "image": "images/probz/pi-day.png"
   },
   {
     "text":"that you were born with 11 fingers or toes",
     "probability":0.002,
     "category":"",
     "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/11-fingers.png"
   },
   {
     "text":"that you will die of heart disease next year",
     "probability":0.001872659176,
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/heart-disease.png"
   },
   {
     "text":"that you are a native speaker of Quechua",
     "probability":0.0013,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"http://www.omniglot.com/language/phrases/quechua.php"
+    "image source":"http://www.omniglot.com/language/phrases/quechua.php",
+    "image": "images/probz/quechua.png"
   },
   {
     "text":"that you are a native speaker of Swedish",
     "probability":0.0013,
     "category":"language",
     "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
-    "image source":"https://translate.google.com/"
+    "image source":"https://translate.google.com/",
+    "image": "images/probz/swedish.png"
   },
   {
     "text":"that today is February 29",
     "probability":0.0006844626968,
     "category":"time",
     "source":"",
-    "image source":"http://pixabay.com/p-460676/?no_redirect"
+    "image source":"http://pixabay.com/p-460676/?no_redirect",
+    "image": "images/probz/feb-29.png"
   },
   {
     "text":"that you will die of surgical complications",
     "probability":0.0006329113924,
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg/728px-Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg/728px-Surgical_instruments_for_the_use_in_military_surgery%3B_anon._Wellcome_M0010398EA.jpg",
+    "image": "images/probz/surgery.jpg"
   },
   {
     "text":"that you will die next year at home",
     "probability":0.000126984127,
     "category":"death",
     "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/dead-at-home.png"
   },
   {
     "text":"that, if you are American, your name is James Smith",
     "probability":0.0001212436709,
     "category":"name",
     "source":"http://www.statista.com/statistics/279713/frequent-combinations-of-first-and-last-name-in-the-us/",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/james-smith.png"
   },
   {
     "text":"that, if you are American, your name is Maria Garcia",
     "probability":0.000101556962,
     "category":"name",
     "source":"http://www.statista.com/statistics/279713/frequent-combinations-of-first-and-last-name-in-the-us/",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/maria-garcia.png"
   },
   {
     "text":"that you will die next year in a car accident",
     "probability":0.00005673758865,
     "category":"death",
     "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php",
-    "image source":"https://openclipart.org/image/300px/svg_to_png/94567/car-accident.png"
+    "image source":"https://openclipart.org/image/300px/svg_to_png/94567/car-accident.png",
+    "image": "images/probz/car-accident.png"
   },
   {
     "text":"that you will die in an earthquake",
     "probability":0.000007582075972,
     "category":"death",
     "source":"http://www.livescience.com/3780-odds-dying.html",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/9/9f/Valdivia_after_earthquake,_1960.jpg"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/9/9f/Valdivia_after_earthquake,_1960.jpg",
+    "image": "images/probz/earthquake.jpg"
   },
   {
     "text":"that you will die in a house fire next year",
     "probability":0.000007024987882,
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/9/96/ShadowRidgeRoadFire.JPG"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/9/96/ShadowRidgeRoadFire.JPG",
+    "image": "images/probz/house-fire.jpg"
   },
   {
     "text":"that you will die in an airplane crash",
     "probability":0.000002822315484,
     "category":"death",
     "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/3/33/JRM_Marshall_Mars_burning_5Apr1950.jpg"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/3/33/JRM_Marshall_Mars_burning_5Apr1950.jpg",
+    "image": "images/probz/plane-crash.jpg"
   },
   {
     "text":"that you will die next year falling out of a building",
     "probability":0.000001934423058,
     "category":"death",
     "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php",
-    "image source":""
+    "image source":"",
+    "image": "images/probz/falling-out-of-building.png"
   },
   {
     "text":"that you'll get a royal flush in poker on the first five cards dealt",
     "probability":0.000001539077169,
     "category":"",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/1/10/Royal_flush.JPG"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/1/10/Royal_flush.JPG",
+    "image": "images/probz/royal-flush.jpg"
   },
   {
     "text":"that you will win an Olympic medal",
     "probability":0.000001510574018,
     "category":"",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/a/a7/Olympic_flag.svg"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/a/a7/Olympic_flag.svg",
+    "image": "images/probz/olympics.svg"
   },
   {
     "text":"that you will become president",
     "probability":1e-7,
     "category":"career",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg",
+    "image": "images/probz/presideng.svg"
   },
   {
     "text":"that you will become an astronaut",
     "probability":7.575757576e-8,
     "category":"career",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/2/24/Astronaut-EVA_edit3.png"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/2/24/Astronaut-EVA_edit3.png",
+    "image": "images/probz/astronaut.png"
   },
   {
     "text":"that you will be made a saint",
     "probability":5e-8,
     "category":"saint",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/d/dc/Saint_Peter_the_Aleut.jpg"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/d/dc/Saint_Peter_the_Aleut.jpg",
+    "image": "images/probz/saint2.jpg"
   },
   {
     "text":"that you have the winning Mega Millions lottery ticket",
     "probability":7.399409468e-9,
     "category":"",
     "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you",
-    "image source":"https://farm3.staticflickr.com/2440/3856718374_77d28f4f1d_o.jpg"
+    "image source":"https://farm3.staticflickr.com/2440/3856718374_77d28f4f1d_o.jpg",
+    "image": "images/probz/lottery.jpg"
   },
   {
     "text":"that you will die from a shark attack",
     "probability":3.333333333e-9,
     "category":"death",
     "source":"http://www.funny2.com/odds.htm",
-    "image source":"http://upload.wikimedia.org/wikipedia/commons/7/79/Tiger_shark_drawing.svg"
+    "image source":"http://upload.wikimedia.org/wikipedia/commons/7/79/Tiger_shark_drawing.svg",
+    "image": "images/probz/shark.svg"
   },
   {
     "text":"that you will be killed this year by a falling vending machine",
     "probability":1.857142857e-9,
     "category":"death",
     "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html",
-    "image source":"https://c1.staticflickr.com/1/187/483187235_3ecb3f307b.jpg"
+    "image source":"https://c1.staticflickr.com/1/187/483187235_3ecb3f307b.jpg",
+    "image": "images/probz/vending-machine.jpg"
   }
 ];
 
