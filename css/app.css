@@ -136,10 +136,25 @@ h1 {
   border-left-color: #979797;
   border-left-style: dashed;
   padding-left: 10px;
+  margin-bottom: 100px;
 }
 
-#result_section p {
+#result_section p, table {
   margin-bottom: 10px;
+}
+
+#result_section table {
+  width: 100%;
+}
+
+#result_section table td, #result_section img {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#congruent, #plus {
+  color: #C05040;
+  padding: 5px;
 }
 
 #probability:first-letter {
