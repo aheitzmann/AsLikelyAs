@@ -320,7 +320,7 @@ var sizes = [
     'name': 'fireball',
     'description': 'a fireball big enough to be audible',
     'number_per_year': 18250.0,
-    'event_title': 'Audible fireball',
+    'event_title': 'Audible fireballs',
     'text': 'Fireballs are actually very common - thousands of meteors bright enough to be considered fireballs hit Earth every day. If it\'s big enough, and explodes, you might even be able to hear it - about 50 meteors this big hit every day. NASA reported 76 airbursts that exploded with the force of at least 200 pounds of TNT since 2009. Almost all of these explosions are small enough and high enough, though, that nothing on the ground would have been damaged.',
     'text_sources': [
       'http://www.amsmeteors.org/fireballs/faqf/#2',
@@ -361,14 +361,16 @@ var crossProducts = [
     'size_id': SIZE_AUDIBLE,
     'text': 'Most fireballs occur over ocean or unpopulated areas. If a meteor falls in the forest and no one is there to hear it...',
     'text_sources': [],
-    'image': 'images/anywhere-fireball.png'
+    'image': 'images/anywhere-fireball.png',
+    'image_source': 'http://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg',
   },
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_CHELYABINSK,
     'text': 'Most airbursts will occur over ocean or unpopulated areas. A Chelyabinsk-sized airburst might burn a little foliage.',
     'text_sources': [],
-    'image': 'images/anywhere-chelyabinsk.png'
+    'image': 'images/anywhere-chelyabinsk.png',
+    'image_source': 'http://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg',
   },
   {
     'scope_id': SCOPE_EARTH,
@@ -377,28 +379,32 @@ var crossProducts = [
     'text_sources': [
       'http://mpainesyd.com/idisk/Public/paine_tsunami_asteroid99.pdf'
     ],
-    'image': 'images/anywhere-tunguska.png'
+    'image': 'images/anywhere-tunguska.png',
+    'image_source': 'http://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg',
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_AUDIBLE,
     'text': 'Even though fireballs of this magnitude are common enough that they are commonly visible from populated areas, they are often not observed if they happen when it\'s too bright, when people are sleeping, or just when nobody is looking!',
     'text_sources': [],
-    'image': 'images/populated-fireball.png'
+    'image': 'images/populated-fireball.png',
+    'image_source': 'http://pixabay.com/p-158763/?no_redirect',
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_CHELYABINSK,
     'text': '',
     'text_sources': [],
-    'image': 'images/populated-chelyabinsk.png'
+    'image': 'images/populated-chelyabinsk.png',
+    'image_source': 'http://pixabay.com/p-158763/?no_redirect',
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_TUNGUSKA,
     'text': '',
     'text_sources': [],
-    'image': 'images/populated-tunguska.png'
+    'image': 'images/populated-tunguska.png',
+    'image_source': 'http://pixabay.com/p-158763/?no_redirect',
   },
   {
     'scope_id': SCOPE_METRO,
@@ -407,14 +413,16 @@ var crossProducts = [
     'text_sources': [
       'http://www.lohud.com/story/news/local/2014/12/30/fireball-lights-sky-new-york/21039521/'
     ],
-    'image': 'images/nyc-fireball.png'
+    'image': 'images/nyc-fireball.png',
+    'image_source': 'http://upload.wikimedia.org/wikipedia/commons/4/41/NYC_Skyline_Silhouette.png',
   },
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_CHELYABINSK,
     'text': '',
     'text_sources': [],
-    'image': 'images/nyc-chelyabinsk.png'
+    'image': 'images/nyc-chelyabinsk.png',
+    'image_source': 'http://upload.wikimedia.org/wikipedia/commons/4/41/NYC_Skyline_Silhouette.png',
   },
   {
     'scope_id': SCOPE_METRO,
@@ -424,7 +432,8 @@ var crossProducts = [
       'http://en.wikipedia.org/wiki/Tunguska_event',
       'http://link.springer.com/article/10.1007/s11069-010-9597-3'
     ],
-    'image': 'images/nyc-tunguska.png'
+    'image': 'images/nyc-tunguska.png',
+    'image_source': 'http://upload.wikimedia.org/wikipedia/commons/4/41/NYC_Skyline_Silhouette.png',
   },
   {
     'scope_id': SCOPE_ME,
