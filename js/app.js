@@ -352,9 +352,16 @@ function displayResult(scopeId, sizeId) {
     return;
   }
 
+  var probability_elements = getProbabilityNear(scope.percent * size.number_per_year, 2);
+
   // fill in text
   p.html(crossProduct.text);
-  p.html(getProbabilityComparisonText(scope, size, [probabilities[0]]));
+
+  if (_.size(probability_elements) > 0) {
+    p.html(getProbabilityComparisonText(scope, size, probability_elements));
+  } else {
+    p.html("NO SIMILAR PROBABILITIES");
+  }
 }
 
 function getProbabilityComparisonText(scope, size, probability_examples) {
@@ -367,6 +374,17 @@ function getProbabilityComparisonText(scope, size, probability_examples) {
     text = text + example.text;
   });
   return text;
+}
+
+function getProbabilityNear(target, similarity) {
+  var high = target * similarity;
+  var low = target / similarity;
+
+  var similar = _.filter(probabilities, function(probability) {
+    return probability.probability < high && probability.probability > low;
+  });
+
+  return _.sample(similar, 1);
 }
 
 /* DB functions and stuff */
