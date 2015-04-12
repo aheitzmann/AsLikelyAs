@@ -259,20 +259,37 @@ var sizes = [
   {
     'id': SIZE_AUDIBLE,
     'name': 'fireball',
-    'description': 'an audible fireball',
-    'number_per_year': 10950.0
+    'description': 'a fireball big enough to be audible',
+    'number_per_year': 18250.0,
+    'event_title': 'Audible fireball',
+    'text': 'Fireballs are actually very common - thousands of meteors bright enough to be considered fireballs hit Earth every day. If it’s big enough, and explodes, you might even be able to hear it - about 50 meteors this big hit every day. NASA reported 76 airbursts that exploded with the force of at least 200 pounds of TNT since 2009. Almost all of these explosions are small enough and high enough, though, that nothing on the ground would have been damaged.',
+    'text_sources': [
+      'http://www.amsmeteors.org/fireballs/faqf/#2',
+      'http://www3.nd.edu/~nsl/Lectures/phys205/pdf/Nuclear_Warfare_8.pdf',
+      'http://neo.jpl.nasa.gov/fireball/'
+    ]
   },
   {
     'id': SIZE_CHELYABINSK,
     'name': 'Chelyabinsk',
     'description': 'an airburst like the Chelyabinsk event',
-    'number_per_year': 0.03333333333
+    'number_per_year': 0.03333333333,
+    'event_title': 'Chelyabinsk event',
+    'text': 'On February 15, 2013, a meteorite exploded in an airburst at an altitude of 30 km, releasing energy 30 times greater than that of the atomic bomb dropped at Hiroshima. At its peak, the meteor was brighter than the sun. The blast from the explosion seriously injured 1500 people and damaged buildings across six cities in the region.',
+    'text_sources': [
+      'http://en.wikipedia.org/wiki/Chelyabinsk_meteor',
+    ]
   },
   {
     'id': SIZE_TUNGUSKA,
     'name': 'Tunguska',
     'description': 'an airburst like the Tunguska event',
-    'number_per_year': 0.001
+    'number_per_year': 0.001,
+    'event_title': 'Tunguska event',
+    'text': 'On June 30, 1908, a meteorite exploded in an airburst at an altitude of 5-10 km in eastern Russia, releasing energy 1000 times greater than that of of the atomic bomb dropped on Hiroshima. The blast leveled about 2000 square kilometers of forest and broke windows 100s of kilometers away.',
+    'text_sources': [
+      'http://en.wikipedia.org/wiki/Tunguska_event'
+    ]
   }
 ];
 
