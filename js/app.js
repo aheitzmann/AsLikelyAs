@@ -1,3 +1,5 @@
+/* all the data */
+
 // Scopes
 SCOPE_EARTH = 0
 SCOPE_POPULATED = 1
@@ -70,6 +72,12 @@ var crossProducts = [
     'text': 'These are some interesting facts!'
   }
 ];
+
+/* all the code */
+
+$(document).ready(function() {
+  inputChanged();
+});
 
 function inputChanged() {
 	displayResult($("#area_scope_slider").val(), $("#event_size_slider").val());
