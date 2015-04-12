@@ -393,7 +393,7 @@ var crossProducts = [
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'The Chelyabinsk event itself is probably a good predictor of what this kind event would look like - about 1500 people were injured by flying glass or sustained burns, and many buildings were mildly damaged.',
+    'text': 'The Chelyabinsk event itself may be a good predictor of what this kind event would look like - minor injuries and damage to structures in the area.',
     'text_sources': [],
     'image': 'images/populated-chelyabinsk.png',
     'image_source': 'http://pixabay.com/p-158763/?no_redirect',
@@ -419,7 +419,7 @@ var crossProducts = [
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_CHELYABINSK,
-    'text': '',
+    'text': 'The Chelyabinsk event itself is probably a good predictor of what this kind event would look like - about 1500 people were injured by flying glass or sustained burns, and many buildings were mildly damaged.',
     'text_sources': [],
     'image': 'images/nyc-chelyabinsk.png',
     'image_source': 'http://upload.wikimedia.org/wikipedia/commons/4/41/NYC_Skyline_Silhouette.png',
@@ -584,8 +584,8 @@ function displayResult(scopeId, sizeId) {
 
 function getAudibleMeteorText(scope, size) {
   if (scope.id == SCOPE_ME) {
-    return 'If you were able to pay attention constantly, the chances are about 1 in ' + 
-           Math.round(1/getScopeSizeProbability(scope, size)) + 
+    return 'If you were able to pay attention constantly, the chances are about 1 in ' +
+           Math.round(1/getScopeSizeProbability(scope, size)) +
            ' that you would hear a fireball in the next year.';
   } else {
     var number_per_year = Math.round(getScopeSizeProbability(scope, size));
