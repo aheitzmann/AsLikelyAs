@@ -517,7 +517,7 @@ function displayResult(scopeId, sizeId) {
 
   // compute width per image
   var probabilityImageCount = (probability_elements ? probability_elements.length : 0);
-  var imageWidth = ($('#probability-images').width() - 60) / (probabilityImageCount + 1);
+  var imageWidth = ($('#probability-images').width() - 80) / (probabilityImageCount + 1);
 
   // function to show an image and set up the alt text, etc
   function showImage(imageElement, imageData) {
