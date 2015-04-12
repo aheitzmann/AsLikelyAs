@@ -481,8 +481,8 @@ function displayResult(scopeId, sizeId) {
 
   // show probability text
   var probability_elements = getProbabilityNear(scope.percent * size.number_per_year, 2);
-  if (_.size(probability_elements) > 0) {
-    probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements[0]));
+  if (probability_elements) {
+    probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements));
   } else {
     probabilityElement.html("NO SIMILAR PROBABILITIES");
   }
@@ -546,7 +546,7 @@ function getProbabilityNear(target, similarity) {
     });
   });
 
-  return _.sample(similar, 1);
+  return _.sample(similar, 1)[0];
 }
 
 /* DB functions and stuff */
