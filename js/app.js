@@ -490,6 +490,13 @@ function displayResult(scopeId, sizeId) {
   } else {
     var probability_elements = getProbabilityNear(getScopeSizeProbability(scope, size), 2);
     if (probability_elements) {
+
+      // Sort the probability examples by category and saintliness.
+      probability_elements = _.sortBy(probability_elements, function(element) {
+        return element.category == "saint" ? 2
+             : element.category == "death" ? 1
+             : 0;
+      });
       probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements));
 
       // add sources
@@ -583,13 +590,6 @@ function getProbabilityComparisonText(scope, size, probability_examples) {
               ' will impact ' +
               scope.description +
               ' is about the same as the chance ';
-
-  // Sort the probability examples by category and saintliness.
-  probability_examples = _.sortBy(probability_examples, function(example) {
-    return example.category == "saint" ? 2
-         : example.category == "death" ? 1
-         : 0;
-  });
 
   var probability_texts = _.map(probability_examples, function(example) {
     return example.text;
