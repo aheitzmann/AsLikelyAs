@@ -285,7 +285,7 @@ var scopes = [
   {
     'id': SCOPE_EARTH,
     'name': 'earth',
-    'description': 'any place on earth',
+    'description': 'some place on earth',
     'percent': 1.0
   },
   {
@@ -479,13 +479,18 @@ function displayResult(scopeId, sizeId) {
     return;
   }
 
-  // show probability text
-  var probability_elements = getProbabilityNear(scope.percent * size.number_per_year, 2);
-  if (probability_elements) {
-    probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements));
+  if (size.id == SIZE_AUDIBLE && scope.id != SCOPE_ME) {
+    probabilityElement.html(getAudibleMeteorText(scope, size));
   } else {
-    probabilityElement.html("NO SIMILAR PROBABILITIES");
+    // show probability text
+    var probability_elements = getProbabilityNear(scope.percent * size.number_per_year, 2);
+    if (probability_elements) {
+      probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements));
+    } else {
+      probabilityElement.html("NO SIMILAR PROBABILITIES");
+    }
   }
+
 
   // show images
   $('#crossproduct-image').attr('src', crossProduct.image).width(300);
@@ -497,6 +502,14 @@ function displayResult(scopeId, sizeId) {
   // show information about event
   $('#event-title').html(size.event_title);
   $('#event-description').html(size.text);
+}
+
+function getAudibleMeteorText(scope, size) {
+  var number_per_year = Math.round(scope.percent * size.number_per_year);
+  var text = 'About ' + number_per_year.toLocaleString() +
+             ' fireballs will be so powerful they can be heard from ' +
+             scope.description + ' in the next year.';
+  return text;
 }
 
 function getProbabilityComparisonText(scope, size, probability_examples) {
