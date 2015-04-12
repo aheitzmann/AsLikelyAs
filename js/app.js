@@ -45,12 +45,6 @@ var probabilities = [
     "source":"http://www.funny2.com/odds.htm"
   },
   {
-    "text":"that it's January",
-    "probability":0.08333333333,
-    "category":"time",
-    "source":""
-  },
-  {
     "text":"that your application to Harvard will be accepted",
     "probability":0.059,
     "category":"",
