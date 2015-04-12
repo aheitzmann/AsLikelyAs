@@ -359,7 +359,7 @@ function displayResult(scopeId, sizeId) {
 }
 
 function getProbabilityComparisonText(scope, size, probability_examples) {
-  var text = 'The chance that ' +
+  var text = 'The chance that some time in the next year, ' +
               size.description +
               ' will impact ' +
               scope.description +
