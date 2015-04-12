@@ -469,35 +469,16 @@ function getScopeSizeProbability(scope, size) {
 
 function displayResult(scopeId, sizeId) {
 
-  // get the element that will hold our results
-  var probabilityElement = $('#probability');
-  probabilityElement.empty(); // clear it out to fix drop cap bug
-
-  // find the scope
+  /* do a lookup from our "db" */
   var scope = findScopeById(scopeId);
-  if (!scope) {
-    probabilityElement.html('Scope not found.');
-    return;
-  }
-
-  // find the size
   var size = findSizeById(sizeId);
-  if (!size) {
-    probabilityElement.html('Size not found.');
-    return;
-  }
-
-  // find the cross product of scope and size
   var crossProduct = findCrossProductOfScopeAndSize(scope, size);
-  if (!crossProduct) {
-    probabilityElement.html('No data available for ' + scope.name + ' and ' + size.name);
-    return;
-  }
 
+  /* show text in probability paragraph */
+  var probabilityElement = $('#probability');
   if (size.id == SIZE_AUDIBLE && scope.id != SCOPE_ME) {
     probabilityElement.html(getAudibleMeteorText(scope, size));
   } else {
-    // show probability text
     var probability_elements = getProbabilityNear(getScopeSizeProbability(scope, size), 2);
     if (probability_elements) {
       probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements));
@@ -510,19 +491,20 @@ function displayResult(scopeId, sizeId) {
       }).join(',').value();
       probabilityElement.append('<sup>' + sourceLinks + '</sup>');
     } else {
-      probabilityElement.html("NO SIMILAR PROBABILITIES");
+      probabilityElement.html('Whoops! We can\'t find something similar.');
     }
   }
 
+  /* show images */
 
-  // show images
+  // compute width per image
   var probabilityImageCount = (probability_elements ? probability_elements.length : 0);
   var imageWidth = ($('#probability-images').width() - 60) / (probabilityImageCount + 1);
 
   // display the cross product image
   $('#crossproduct-image').attr('src', crossProduct.image).width(imageWidth);
 
-  // show an image and set up the alt text, etc
+  // function to show an image and set up the alt text, etc
   function showImageWithProbability(imageElement, probability) {
     imageElement.attr('src', probability.image).width(imageWidth);
     if (probability.image_source) {
@@ -531,13 +513,13 @@ function displayResult(scopeId, sizeId) {
     imageElement.show();
   }
 
-  // hide and reset the image
+  // function hide and reset the image
   function hideImage(imageElement) {
     imageElement.hide();
     imageElement.removeAttr('title');
   }
 
-  // show the remaining images
+  // show the first probability image if necessary
   if (probabilityImageCount > 0) {
     showImageWithProbability($('#probability-image-0'), probability_elements[0]);
     $('#congruent').show();
@@ -546,6 +528,7 @@ function displayResult(scopeId, sizeId) {
     $('#congruent').hide();
   }
 
+  // show the second probability image if necessary
   if (probabilityImageCount > 1) {
     showImageWithProbability($('#probability-image-1'), probability_elements[1]);
     $('#plus').show();
@@ -554,12 +537,26 @@ function displayResult(scopeId, sizeId) {
     $('#plus').hide();
   }
 
-  // show crossproduct text
+  /* show "what if?" text (crossproduct) */
+
   $('#outcome').html(crossProduct.text);
 
-  // show information about event
+  // add sources
+  var sourceLinks = _.chain(crossProduct.text_sources).filter().map(function(source, i) {
+    return '<a href="' + source + '"" target="_blank">' + (i + 1) + '</a>';
+  }).join(',').value();
+  $('#outcome').append('<sup>' + sourceLinks + '</sup>');
+
+  /* show a description */
+
   $('#event-title').html(size.event_title);
   $('#event-description').html(size.text);
+
+  // add sources to description
+  var sourceLinks = _.chain(size.text_sources).filter().map(function(source, i) {
+    return '<a href="' + source + '"" target="_blank">' + (i + 1) + '</a>';
+  }).join(',').value();
+  $('#event-description').append('<sup>' + sourceLinks + '</sup>');
 }
 
 function getAudibleMeteorText(scope, size) {
