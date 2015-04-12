@@ -177,7 +177,7 @@ var probabilities = [
     "source":"http://www.funny2.com/odds.htm"
   },
   {
-    "text":"that you will be canonized",
+    "text":"that you will be made a saint",
     "probability":5e-8,
     "category":"career",
     "source":"http://www.funny2.com/odds.htm"
@@ -226,7 +226,7 @@ var scopes = [
     'id': SCOPE_ME,
     'name': 'me',
     'description': 'you',
-    'percent': 0.0000000019607843
+    'percent': 0.000000000000001960399922
   }
 ];
 
@@ -358,7 +358,7 @@ function displayResult(scopeId, sizeId) {
   p.html(crossProduct.text);
 
   if (_.size(probability_elements) > 0) {
-    p.html(getProbabilityComparisonText(scope, size, probability_elements));
+    p.html(getProbabilityComparisonText(scope, size, probability_elements[0]));
   } else {
     p.html("NO SIMILAR PROBABILITIES");
   }
@@ -370,18 +370,39 @@ function getProbabilityComparisonText(scope, size, probability_examples) {
               ' will impact ' +
               scope.description +
               ' is about the same as the chance ';
-  _.each(probability_examples, function(example) {
-    text = text + example.text;
+
+  var probability_texts = _.map(probability_examples, function(example) {
+    return example.text;
   });
+  text = text + probability_texts.join(' and ');
+
   return text;
+}
+
+function between(val, lo, hi) {
+  return val < hi && val > lo;
 }
 
 function getProbabilityNear(target, similarity) {
   var high = target * similarity;
   var low = target / similarity;
 
-  var similar = _.filter(probabilities, function(probability) {
-    return probability.probability < high && probability.probability > low;
+  var similar = [];
+
+  _.each(probabilities, function(probability1) {
+    if (between(probability1.probability, low, high)) {
+      similar.push([probability1]);
+    }
+
+    _.each(probabilities, function(probability2) {
+      if (probability1 == probability2) return;
+      if (probability1.category != "" && probability1.category == probability2.category) return;
+
+      var combined_prob = probability1.probability * probability2.probability;
+      if (between(combined_prob, low, high)) {
+        similar.push([probability1, probability2]);
+      }
+    });
   });
 
   return _.sample(similar, 1);
