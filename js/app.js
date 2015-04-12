@@ -173,7 +173,7 @@ var probabilities = [
   {
     "text":"that you will be made a saint",
     "probability":5e-8,
-    "category":"career",
+    "category":"saint",
     "source":"http://www.funny2.com/odds.htm"
   },
   {
@@ -365,10 +365,17 @@ function getProbabilityComparisonText(scope, size, probability_examples) {
               scope.description +
               ' is about the same as the chance ';
 
+  // Sort the probability examples by category and saintliness.
+  probability_examples = _.sortBy(probability_examples, function(example) {
+    return example.category == "saint" ? 2
+         : example.category == "death" ? 1
+         : 0;
+  });
+
   var probability_texts = _.map(probability_examples, function(example) {
     return example.text;
   });
-  text = text + probability_texts.join(' and ');
+  text = text + probability_texts.join(' and ') + '.';
 
   return text;
 }
