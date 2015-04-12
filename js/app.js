@@ -281,62 +281,74 @@ var crossProducts = [
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_REACHED_GROUND,
-    'text': 'a'
+    'text': 'a',
+    'image': 'images/anywhere-fireball.png'
   },
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'b'
+    'text': 'b',
+    'image': 'images/anywhere-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'c'
+    'text': 'c',
+    'image': 'images/anywhere-tunguska.png'
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_REACHED_GROUND,
-    'text': 'd'
+    'text': 'd',
+    'image': 'images/populated-fireball.png'
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'e'
+    'text': 'e',
+    'image': 'images/populated-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'f'
+    'text': 'f',
+    'image': 'images/populated-tunguska.png'
   },
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_REACHED_GROUND,
-    'text': 'g'
+    'text': 'g',
+    'image': 'images/nyc-fireball.png'
   },
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'h'
+    'text': 'h',
+    'image': 'images/nyc-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'i'
+    'text': 'i',
+    'image': 'images/nyc-tunguska.png'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_REACHED_GROUND,
-    'text': 'j'
+    'text': 'j',
+    'image': 'images/'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'k'
+    'text': 'k',
+    'image': 'images/'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'l'
+    'text': 'l',
+    'image': 'images/'
   }
 ];
 
@@ -386,6 +398,8 @@ function displayResult(scopeId, sizeId) {
   } else {
     p.html("NO SIMILAR PROBABILITIES");
   }
+
+  $('#result_image').html('<img src="' + crossProduct.image + '" width="300"/>');
 }
 
 function getProbabilityComparisonText(scope, size, probability_examples) {
