@@ -28,7 +28,7 @@ var probabilities = [
     "category":"",
     "source":"",
     "image source":"http://nesterko.com/lectures/stat221-2012/lecture13/coinflip.gif",
-    "image": "images/probz/coin-flip.gif"
+    "image": "images/probz/coinflip.gif"
   },
   {
     "text":"that you are a native speaker of Mandarin",
