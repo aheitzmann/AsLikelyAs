@@ -71,16 +71,8 @@ var crossProducts = [
   }
 ];
 
-
-$(document).ready(function(){
-  $('#hello').click(function() {
-    alert('Ouch!');
-  });
-});
-
-function showValue(newValue)
-{
-	document.getElementById("range").innerHTML=newValue;
+function inputChanged() {
+	displayResult($("#area_scope_slider").val(), $("#event_size_slider").val());
 }
 
 function displayResult(scopeId, sizeId) {

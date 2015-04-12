@@ -15,7 +15,7 @@
 	    		<tr>
 					<td class="slider_cell" colspan="4">
 						<label for="area_scope_slider"><span class="slider_label">Type of Area Affected</span></label>
-						<input id="area_scope_slider" class="input_slider" type="range" min="0" max="3" value="0" onchange="showValue(this.value)" /> 
+						<input id="area_scope_slider" class="input_slider" type="range" min="0" max="3" value="0" onchange="inputChanged()" /> 
 					</td>
 				</tr>
 				<tr>
@@ -30,7 +30,7 @@
 	    		<tr>
 					<td class="slider_cell" colspan="3">
 						<label for="event_size_slider"><span class="slider_label">Size of Meteor</span></label>
-						<input id="event_size_slider" class="input_slider" type="range" min="0" max="2" value="0" oninput="showValue(this.value)" />
+						<input id="event_size_slider" class="input_slider" type="range" min="0" max="2" value="0" onchange="inputChanged()" />
 					</td>
 				</tr>
 				<tr>
