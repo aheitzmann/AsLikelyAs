@@ -304,7 +304,12 @@ var scopes = [
     'id': SCOPE_ME,
     'name': 'me',
     'description': 'you',
-    'percent': 0.000000000000001960399922
+    'percent': 0.000000000000001960399922,
+    'percent_by_size': {
+      0: 0.00001418626,  // Audible up to 30 miles away.
+      1: 0.00010206182,  // 80 miles of destruction on each side.
+      2: 0.00000416243  // Destroyed 800 square miles.
+    }
   }
 ];
 
@@ -320,7 +325,8 @@ var sizes = [
     'text_sources': [
       'http://www.amsmeteors.org/fireballs/faqf/#2',
       'http://www3.nd.edu/~nsl/Lectures/phys205/pdf/Nuclear_Warfare_8.pdf',
-      'http://neo.jpl.nasa.gov/fireball/'
+      'http://neo.jpl.nasa.gov/fireball/',
+      'http://www.space.com/15353-meteor-showers-facts-shooting-stars-skywatching-sdcmp.html'
     ]
   },
   {
@@ -332,6 +338,7 @@ var sizes = [
     'text': 'On February 15, 2013, a meteorite exploded in an airburst at an altitude of 30 km, releasing energy 30 times greater than that of the atomic bomb dropped at Hiroshima. At its peak, the meteor was brighter than the sun. The blast from the explosion seriously injured 1500 people and damaged buildings across six cities in the region.',
     'text_sources': [
       'http://en.wikipedia.org/wiki/Chelyabinsk_meteor',
+      'http://www.theguardian.com/science/2013/nov/06/chelyabinsk-meteor-russia',
     ]
   },
   {
@@ -452,6 +459,14 @@ function inputChanged() {
 	displayResult($("#area_scope_slider").val(), $("#event_size_slider").val());
 }
 
+function getScopeSizeProbability(scope, size) {
+  if (scope.id == SCOPE_ME) {
+    return scope.percent_by_size[size.id] * size.number_per_year;
+  } else {
+    return scope.percent * size.number_per_year;
+  }
+}
+
 function displayResult(scopeId, sizeId) {
 
   // get the element that will hold our results
@@ -483,7 +498,7 @@ function displayResult(scopeId, sizeId) {
     probabilityElement.html(getAudibleMeteorText(scope, size));
   } else {
     // show probability text
-    var probability_elements = getProbabilityNear(scope.percent * size.number_per_year, 2);
+    var probability_elements = getProbabilityNear(getScopeSizeProbability(scope, size), 2);
     if (probability_elements) {
       probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements));
     } else {
@@ -540,7 +555,7 @@ function displayResult(scopeId, sizeId) {
 }
 
 function getAudibleMeteorText(scope, size) {
-  var number_per_year = Math.round(scope.percent * size.number_per_year);
+  var number_per_year = Math.round(getScopeSizeProbability(scope, size));
   var text = 'About ' + number_per_year.toLocaleString() +
              ' fireballs will be so powerful they can be heard from ' +
              scope.description + ' in the next year.';
