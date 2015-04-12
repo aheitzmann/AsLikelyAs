@@ -236,7 +236,7 @@ var probabilities = [
     "category":"career",
     "source":"http://www.funny2.com/odds.htm",
     "image_source":"http://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg",
-    "image": "images/probz/presideng.svg"
+    "image": "images/probz/president.svg"
   },
   {
     "text":"that you will become an astronaut",
