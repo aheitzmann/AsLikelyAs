@@ -488,7 +488,8 @@ function displayResult(scopeId, sizeId) {
   }
 
   // show images
-  $('#probability-images').html('<img src="' + crossProduct.image + '" width="300"/>');
+  $('#crossproduct-image').attr('src', crossProduct.image).width(300);
+
 
   // show crossproduct text
   $('#outcome').html(crossProduct.text);
