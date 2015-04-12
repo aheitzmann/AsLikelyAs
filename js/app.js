@@ -445,14 +445,14 @@ var crossProducts = [
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_CHELYABINSK,
-    'text': '',
+    'text': 'You might be injured by flying glass from blown out windows, or possibly suffer shallow burns.',
     'text_sources': [],
     'image': 'images/you-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_TUNGUSKA,
-    'text': '',
+    'text': 'You would be killed. Vaporized, probably.',
     'text_sources': [],
     'image': 'images/you-tunguska.png'
   }
