@@ -298,73 +298,92 @@ var crossProducts = [
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_AUDIBLE,
-    'text': 'a',
+    'text': 'Most fireballs occur over ocean or unpopulated areas. If a meteor falls in the forest and no one is there to hear it...',
+    'text_sources': [],
     'image': 'images/anywhere-fireball.png'
   },
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'b',
+    'text': 'Most airbursts will occur over ocean or unpopulated areas. A Chelyabinsk-sized airburst might burn a little foliage.',
+    'text_sources': [],
     'image': 'images/anywhere-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_EARTH,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'c',
+    'text': 'Even a Tunguska-sized airburst would probably cause little harm if it struck the ocean or an unpopulated area. A deep ocean strike even of this size poses negligible tsunami risk to humanity.',
+    'text_sources': [
+      'http://mpainesyd.com/idisk/Public/paine_tsunami_asteroid99.pdf'
+    ],
     'image': 'images/anywhere-tunguska.png'
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_AUDIBLE,
-    'text': 'd',
+    'text': 'Even though fireballs of this magnitude are common enough that they are commonly visible from populated areas, they are often not observed if they happen when it\'s too bright, when people are sleeping, or just when nobody is looking!',
+    'text_sources': [],
     'image': 'images/populated-fireball.png'
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'e',
+    'text': '',
+    'text_sources': [],
     'image': 'images/populated-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'f',
+    'text': '',
+    'text_sources': [],
     'image': 'images/populated-tunguska.png'
   },
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_AUDIBLE,
-    'text': 'g',
+    'text': 'A fireball near a city will probably make the news, but it\'s nothing to worry about.',
+    'text_sources': [
+      'http://www.lohud.com/story/news/local/2014/12/30/fireball-lights-sky-new-york/21039521/'
+    ],
     'image': 'images/nyc-fireball.png'
   },
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'h',
+    'text': '',
+    'text_sources': [],
     'image': 'images/nyc-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'i',
+    'text': 'An airburst like the Tunguska event would be capable of completely destroying a major metropolitan area. It is estimated that an explosion of this size above New York would result in something like 3.9 million fatalities and 1.5 trillion dollars of property loss.',
+    'text_sources': [
+      'http://en.wikipedia.org/wiki/Tunguska_event',
+      'http://link.springer.com/article/10.1007/s11069-010-9597-3'
+    ],
     'image': 'images/nyc-tunguska.png'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_AUDIBLE,
-    'text': 'j',
+    'text': 'If you see or hear a fireball, report it to the American Meteor Society!',
+    'text_sources': ['http://www.amsmeteors.org/members/imo/report_intro'],
     'image': 'images/'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'k',
+    'text': '',
+    'text_sources': [],
     'image': 'images/'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_TUNGUSKA,
-    'text': 'l',
+    'text': '',
+    'text_sources': [],
     'image': 'images/'
   }
 ];
