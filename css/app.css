@@ -87,13 +87,13 @@ body {
 }
 
 #input_params_section {
-  width: 400px;
+  width: 300px;
   float: left;
 }
 
 #result_section {
   display: table;
-  width: 400px;
+  width: 480px;
   float: right;
 }
 
