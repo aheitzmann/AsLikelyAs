@@ -83,7 +83,54 @@ function showValue(newValue)
 	document.getElementById("range").innerHTML=newValue;
 }
 
+function displayResult(scopeId, sizeId) {
 
-function displayResult(scope, size) {
-    // TODO: Walter fill this in
+  // get the element that will hold our results
+  var p = $('#result');
+
+  // find the scope
+  var scope = findScopeById(scopeId);
+  if (!scope) {
+    p.html('Scope not found.');
+    return;
+  }
+
+  // find the size
+  var size = findSizeById(sizeId);
+  if (!size) {
+    p.html('Size not found.');
+    return;
+  }
+
+  // find the cross product of scope and size
+  var crossProduct = findCrossProductOfScopeAndSize(scope, size);
+  if (!crossProduct) {
+    p.html('No data available for ' + scope.name + ' and ' + size.name);
+    return;
+  }
+
+  // fill in text
+  p.html(crossProduct.text);
 }
+
+/* DB functions and stuff */
+
+
+function findScopeById(scopeId) {
+  return _.find(scopes, function(scope) {
+    return scope.id == scopeId;
+  });
+}
+
+function findSizeById(sizeId) {
+  return _.find(sizes, function(size) {
+    return size.id == sizeId;
+  });
+}
+
+function findCrossProductOfScopeAndSize(scope, size) {
+  return _.find(crossProducts, function(crossProduct) {
+    return crossProduct.scope_id == scope.id && crossProduct.size_id == size.id;
+  });
+}
+
