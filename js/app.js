@@ -393,7 +393,7 @@ var crossProducts = [
   {
     'scope_id': SCOPE_POPULATED,
     'size_id': SIZE_CHELYABINSK,
-    'text': 'The Chelyabinsk itself is probably a good predictor of what this kind event would look like - about 1500 people were injured by flying glass or sustained burns, and many buildings were mildly damaged.',
+    'text': 'The Chelyabinsk event itself is probably a good predictor of what this kind event would look like - about 1500 people were injured by flying glass or sustained burns, and many buildings were mildly damaged.',
     'text_sources': [],
     'image': 'images/populated-chelyabinsk.png',
     'image_source': 'http://pixabay.com/p-158763/?no_redirect',
