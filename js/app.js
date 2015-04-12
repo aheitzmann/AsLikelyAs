@@ -503,6 +503,7 @@ function displayResult(scopeId, sizeId) {
 
   // function to show an image and set up the alt text, etc
   function showImage(imageElement, imageData) {
+    imageElement.removeAttr('title');
     imageElement.attr('src', imageData.image).width(imageWidth);
     if (imageData.image_source) {
       imageElement.attr('title', 'Source: ' + imageData.image_source);
@@ -512,8 +513,8 @@ function displayResult(scopeId, sizeId) {
 
   // function hide and reset the image
   function hideImage(imageElement) {
-    imageElement.hide();
     imageElement.removeAttr('title');
+    imageElement.hide();
   }
 
   // display the cross product image
