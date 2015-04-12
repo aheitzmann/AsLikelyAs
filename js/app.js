@@ -15,9 +15,190 @@ SIZE_TUNGUSKA = 2
 /* list of probabilites that we can choose from */
 var probabilities = [
   {
-    'probability': 0.00000005,
-    'text': 'you becoming a saint',
-    'image': 'url'
+    "text":"that you were named after a relative",
+    "probability":0.6,
+    "category":"name",
+    "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html"
+  },
+  {
+    "text":"that you'll flip heads in a coin flip",
+    "probability":0.5,
+    "category":"",
+    "source":""
+  },
+  {
+    "text":"that today is Saturday",
+    "probability":0.1428571429,
+    "category":"time",
+    "source":""
+  },
+  {
+    "text":"that you will die of heart disease",
+    "probability":0.1428571429,
+    "category":"death",
+    "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/"
+  },
+  {
+    "text":"that you will get flu this year",
+    "probability":0.1,
+    "category":"",
+    "source":"http://www.funny2.com/odds.htm"
+  },
+  {
+    "text":"that it's January",
+    "probability":0.08333333333,
+    "category":"time",
+    "source":""
+  },
+  {
+    "text":"that your application to Harvard will be accepted",
+    "probability":0.059,
+    "category":"",
+    "source":"http://www.businessinsider.com/things-harder-than-getting-to-harvard-2014-9"
+  },
+  {
+    "text":"that you are a twin",
+    "probability":0.032,
+    "category":"",
+    "source":"http://sites.la.utexas.edu/twinproject/facts-and-figures/"
+  },
+  {
+    "text":"that a dollar you paid in tax went to NASA",
+    "probability":0.005,
+    "category":"",
+    "source":"http://en.wikipedia.org/wiki/Budget_of_NASA"
+  },
+  {
+    "text":"that a random person has the same birthday as you",
+    "probability":0.002739726027,
+    "category":"",
+    "source":""
+  },
+  {
+    "text":"that today is Pi day",
+    "probability":0.002739726027,
+    "category":"time",
+    "source":""
+  },
+  {
+    "text":"that you were born with 11 fingers or toes",
+    "probability":0.002,
+    "category":"",
+    "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you"
+  },
+  {
+    "text":"that you will die of heart disease next year",
+    "probability":0.001872659176,
+    "category":"death",
+    "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/"
+  },
+  {
+    "text":"that today is February 29",
+    "probability":0.0006844626968,
+    "category":"time",
+    "source":""
+  },
+  {
+    "text":"that you will die of surgical complications",
+    "probability":0.0006329113924,
+    "category":"death",
+    "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/"
+  },
+  {
+    "text":"that you will die next year at home",
+    "probability":0.000126984127,
+    "category":"death",
+    "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php"
+  },
+  {
+    "text":"that, if you are American, your name is James Smith",
+    "probability":0.0001212436709,
+    "category":"name",
+    "source":"http://www.statista.com/statistics/279713/frequent-combinations-of-first-and-last-name-in-the-us/"
+  },
+  {
+    "text":"that, if you are American, your name is Maria Garcia",
+    "probability":0.000101556962,
+    "category":"name",
+    "source":"http://www.statista.com/statistics/279713/frequent-combinations-of-first-and-last-name-in-the-us/"
+  },
+  {
+    "text":"that you will die next year in a car accident",
+    "probability":0.00005673758865,
+    "category":"death",
+    "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php"
+  },
+  {
+    "text":"that you will die next year at work",
+    "probability":0.00003500052501,
+    "category":"death",
+    "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php"
+  },
+  {
+    "text":"that you will go blind if you get laser eye surgery",
+    "probability":0.00001166670556,
+    "category":"",
+    "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you"
+  },
+  {
+    "text":"that you will die in a house fire next year",
+    "probability":0.000007024987882,
+    "category":"death",
+    "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/"
+  },
+  {
+    "text":"that you will die in an airplane crash",
+    "probability":0.000002822315484,
+    "category":"death",
+    "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you"
+  },
+  {
+    "text":"that you will die next year falling out of a building",
+    "probability":0.000001934423058,
+    "category":"death",
+    "source":"http://www.riskcomm.com/visualaids/riskscale/datasources.php"
+  },
+  {
+    "text":"that you'll get a royal flush in poker on the first five cards dealt",
+    "probability":0.000001539077169,
+    "category":"",
+    "source":"http://www.funny2.com/odds.htm"
+  },
+  {
+    "text":"that you will become president",
+    "probability":1e-7,
+    "category":"career",
+    "source":"http://www.funny2.com/odds.htm"
+  },
+  {
+    "text":"that you will become an astronaut",
+    "probability":7.575757576e-8,
+    "category":"career",
+    "source":"http://www.funny2.com/odds.htm"
+  },
+  {
+    "text":"that you will be canonized",
+    "probability":5e-8,
+    "category":"career",
+    "source":"http://www.funny2.com/odds.htm"
+  },
+  {
+    "text":"that you have the winning Mega Millions lottery ticket",
+    "probability":7.399409468e-9,
+    "category":"",
+    "source":"http://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you"
+  },
+  {
+    "text":"that you will die from a shark attack",
+    "probability":3.333333333e-9,
+    "category":"death",
+    "source":"http://www.funny2.com/odds.htm"
+  },
+  {
+    "text":"that you will be killed this year by a falling vending machine",
+    "probability":1.857142857e-9,
+    "category":"death",
+    "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html"
   }
 ];
 
