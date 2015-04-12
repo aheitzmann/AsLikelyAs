@@ -7,7 +7,7 @@ SCOPE_METRO = 2
 SCOPE_ME = 3
 
 // Sizes
-SIZE_REACHED_GROUND = 0
+SIZE_AUDIBLE = 0
 SIZE_CHELYABINSK = 1
 SIZE_TUNGUSKA = 2
 
@@ -257,9 +257,9 @@ var scopes = [
 /* bolide events / likelihood */
 var sizes = [
   {
-    'id': SIZE_REACHED_GROUND,
-    'name': 'meteorite',
-    'description': 'a meteorite',
+    'id': SIZE_AUDIBLE,
+    'name': 'fireball',
+    'description': 'an audible fireball',
     'number_per_year': 10950.0
   },
   {
@@ -271,7 +271,7 @@ var sizes = [
   {
     'id': SIZE_TUNGUSKA,
     'name': 'Tunguska',
-    'description': 'a meteorite like the Tunguska event',
+    'description': 'an airburst like the Tunguska event',
     'number_per_year': 0.001
   }
 ];
@@ -280,7 +280,7 @@ var sizes = [
 var crossProducts = [
   {
     'scope_id': SCOPE_EARTH,
-    'size_id': SIZE_REACHED_GROUND,
+    'size_id': SIZE_AUDIBLE,
     'text': 'a',
     'image': 'images/anywhere-fireball.png'
   },
@@ -298,7 +298,7 @@ var crossProducts = [
   },
   {
     'scope_id': SCOPE_POPULATED,
-    'size_id': SIZE_REACHED_GROUND,
+    'size_id': SIZE_AUDIBLE,
     'text': 'd',
     'image': 'images/populated-fireball.png'
   },
@@ -316,7 +316,7 @@ var crossProducts = [
   },
   {
     'scope_id': SCOPE_METRO,
-    'size_id': SIZE_REACHED_GROUND,
+    'size_id': SIZE_AUDIBLE,
     'text': 'g',
     'image': 'images/nyc-fireball.png'
   },
@@ -334,7 +334,7 @@ var crossProducts = [
   },
   {
     'scope_id': SCOPE_ME,
-    'size_id': SIZE_REACHED_GROUND,
+    'size_id': SIZE_AUDIBLE,
     'text': 'j',
     'image': 'images/'
   },
