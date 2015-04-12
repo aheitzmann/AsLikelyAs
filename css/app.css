@@ -97,6 +97,11 @@ h1 {
 
 .label_cell {
   /* border: 1px solid black; */
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  font-size: 70%;
+  color: rgba(180,180,180, 0.8);
+  text-shadow: 1px 4px 6px #ddd, 0 0 0 #000, 1px 4px 6px #ddd;
 }
 
 .slider_cell {
@@ -155,6 +160,8 @@ h1 {
 #congruent, #plus {
   color: #C05040;
   padding: 5px;
+  font-weight: bold;
+  font-size: 125%;
 }
 
 #probability:first-letter {
