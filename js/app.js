@@ -370,21 +370,21 @@ var crossProducts = [
     'size_id': SIZE_AUDIBLE,
     'text': 'If you see or hear a fireball, report it to the American Meteor Society!',
     'text_sources': ['http://www.amsmeteors.org/members/imo/report_intro'],
-    'image': 'images/'
+    'image': 'images/you-fireball.png'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_CHELYABINSK,
     'text': '',
     'text_sources': [],
-    'image': 'images/'
+    'image': 'images/you-chelyabinsk.png'
   },
   {
     'scope_id': SCOPE_ME,
     'size_id': SIZE_TUNGUSKA,
     'text': '',
     'text_sources': [],
-    'image': 'images/'
+    'image': 'images/you-tunguska.png'
   }
 ];
 
