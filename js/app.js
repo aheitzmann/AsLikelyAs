@@ -409,7 +409,7 @@ var crossProducts = [
   {
     'scope_id': SCOPE_METRO,
     'size_id': SIZE_AUDIBLE,
-    'text': 'A fireball near a city will probably make the news, but it\'s nothing to worry about.',
+    'text': 'A fireball near a city might make the news, but it\'s nothing to worry about.',
     'text_sources': [
       'http://www.lohud.com/story/news/local/2014/12/30/fireball-lights-sky-new-york/21039521/'
     ],
