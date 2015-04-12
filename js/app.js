@@ -501,6 +501,14 @@ function displayResult(scopeId, sizeId) {
     var probability_elements = getProbabilityNear(getScopeSizeProbability(scope, size), 2);
     if (probability_elements) {
       probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements));
+
+      // add sources
+      var sourceLinks = _.chain(probability_elements).filter(function(element) {
+        return _.has(element, 'source') && element.source != '';
+      }).map(function(element, i) {
+        return '<a href="' + element.source + '"" target="_blank">' + (i + 1) + '</a>';
+      }).join(',').value();
+      probabilityElement.append('<sup>' + sourceLinks + '</sup>');
     } else {
       probabilityElement.html("NO SIMILAR PROBABILITIES");
     }

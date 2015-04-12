@@ -181,3 +181,10 @@ p:after, div:after {
   display: table;
   clear: both;
 }
+
+sup {
+  font-size: 66%;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
+}
