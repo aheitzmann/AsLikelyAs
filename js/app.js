@@ -316,7 +316,7 @@ var sizes = [
     'description': 'a fireball big enough to be audible',
     'number_per_year': 18250.0,
     'event_title': 'Audible fireball',
-    'text': 'Fireballs are actually very common - thousands of meteors bright enough to be considered fireballs hit Earth every day. If it’s big enough, and explodes, you might even be able to hear it - about 50 meteors this big hit every day. NASA reported 76 airbursts that exploded with the force of at least 200 pounds of TNT since 2009. Almost all of these explosions are small enough and high enough, though, that nothing on the ground would have been damaged.',
+    'text': 'Fireballs are actually very common - thousands of meteors bright enough to be considered fireballs hit Earth every day. If it\'s big enough, and explodes, you might even be able to hear it - about 50 meteors this big hit every day. NASA reported 76 airbursts that exploded with the force of at least 200 pounds of TNT since 2009. Almost all of these explosions are small enough and high enough, though, that nothing on the ground would have been damaged.',
     'text_sources': [
       'http://www.amsmeteors.org/fireballs/faqf/#2',
       'http://www3.nd.edu/~nsl/Lectures/phys205/pdf/Nuclear_Warfare_8.pdf',
@@ -455,41 +455,47 @@ function inputChanged() {
 function displayResult(scopeId, sizeId) {
 
   // get the element that will hold our results
-  var p = $('#result');
+  var probabilityElement = $('#probability');
+  probabilityElement.empty(); // clear it out to fix drop cap bug
 
   // find the scope
   var scope = findScopeById(scopeId);
   if (!scope) {
-    p.html('Scope not found.');
+    probabilityElement.html('Scope not found.');
     return;
   }
 
   // find the size
   var size = findSizeById(sizeId);
   if (!size) {
-    p.html('Size not found.');
+    probabilityElement.html('Size not found.');
     return;
   }
 
   // find the cross product of scope and size
   var crossProduct = findCrossProductOfScopeAndSize(scope, size);
   if (!crossProduct) {
-    p.html('No data available for ' + scope.name + ' and ' + size.name);
+    probabilityElement.html('No data available for ' + scope.name + ' and ' + size.name);
     return;
   }
 
+  // show probability text
   var probability_elements = getProbabilityNear(scope.percent * size.number_per_year, 2);
-
-  // fill in text
-  p.html(crossProduct.text);
-
   if (_.size(probability_elements) > 0) {
-    p.html(getProbabilityComparisonText(scope, size, probability_elements[0]));
+    probabilityElement.html(getProbabilityComparisonText(scope, size, probability_elements[0]));
   } else {
-    p.html("NO SIMILAR PROBABILITIES");
+    probabilityElement.html("NO SIMILAR PROBABILITIES");
   }
 
-  $('#result_image').html('<img src="' + crossProduct.image + '" width="300"/>');
+  // show images
+  $('#probability-images').html('<img src="' + crossProduct.image + '" width="300"/>');
+
+  // show crossproduct text
+  $('#outcome').html(crossProduct.text);
+
+  // show information about event
+  $('#event-title').html(size.event_title);
+  $('#event-description').html(size.text);
 }
 
 function getProbabilityComparisonText(scope, size, probability_examples) {
