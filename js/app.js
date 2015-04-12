@@ -14,22 +14,22 @@ SIZE_TUNGUSKA = 2
 
 /* list of probabilites that we can choose from */
 var probabilities = [
-  {
-    "text":"that you were named after a relative",
-    "probability":0.6,
-    "category":"name",
-    "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html",
-    "image_source":"http://pixabay.com/p-149866/?no_redirect",
-    "image": "images/probz/named-after-relative.png"
-  },
-  {
-    "text":"that you'll flip heads in a coin flip",
-    "probability":0.5,
-    "category":"",
-    "source":"",
-    "image_source":"http://nesterko.com/lectures/stat221-2012/lecture13/coinflip.gif",
-    "image": "images/probz/coinflip.gif"
-  },
+  // {
+  //   "text":"that you were named after a relative",
+  //   "probability":0.6,
+  //   "category":"name",
+  //   "source":"http://www.weirdfacts.com/fun-facts-a-stuff/3061-percents-and-stats.html",
+  //   "image_source":"http://pixabay.com/p-149866/?no_redirect",
+  //   "image": "images/probz/named-after-relative.png"
+  // },
+  // {
+  //   "text":"that you'll flip heads in a coin flip",
+  //   "probability":0.5,
+  //   "category":"",
+  //   "source":"",
+  //   "image_source":"http://nesterko.com/lectures/stat221-2012/lecture13/coinflip.gif",
+  //   "image": "images/probz/coinflip.gif"
+  // },
   {
     "text":"that you are a native speaker of Mandarin",
     "probability":0.144,
@@ -280,32 +280,32 @@ var probabilities = [
   }
 ];
 
-/* percent of earth's surface area */
+/* fraction of earth's surface area */
 var scopes = [
   {
     'id': SCOPE_EARTH,
     'name': 'earth',
     'description': 'some place on earth',
-    'percent': 1.0
+    'fraction': 1.0
   },
   {
     'id': SCOPE_POPULATED,
     'name': 'populated earth',
     'description': 'anywhere populated',
-    'percent': 0.029
+    'fraction': 0.029
   },
   {
     'id': SCOPE_METRO,
     'name': 'metro',
     'description': 'an urban area',
-    'percent': 0.0087
+    'fraction': 0.0087
   },
   {
     'id': SCOPE_ME,
     'name': 'me',
     'description': 'you',
-    'percent': 0.000000000000001960399922,
-    'percent_by_size': {
+    'fraction': 0.000000000000001960399922,
+    'fraction_by_size': {
       0: 0.00001418626,  // Audible up to 30 miles away.
       1: 0.00010206182,  // 80 miles of destruction on each side.
       2: 0.00000416243  // Destroyed 800 square miles.
@@ -321,7 +321,7 @@ var sizes = [
     'description': 'a fireball big enough to be audible',
     'number_per_year': 18250.0,
     'event_title': 'Audible fireballs',
-    'text': 'Fireballs are actually very common - thousands of meteors bright enough to be considered fireballs hit Earth every day. If it\'s big enough, and explodes, you might even be able to hear it - about 50 meteors this big hit every day. NASA reported 76 airbursts that exploded with the force of at least 200 pounds of TNT since 2009. Almost all of these explosions are small enough and high enough, though, that nothing on the ground would have been damaged.',
+    'text': 'Fireballs are actually very common - thousands of meteors bright enough to be considered fireballs hit Earth every day. Some start cracking into pieces under the pressure, which just causes more pressure, and more cracks, until they explode! If this happens, you might even be able to hear it - about 50 meteors this big hit every day. NASA reported 76 airbursts that exploded with the force of at least 200 pounds of TNT since 2009. Almost all of these explosions are small enough and high enough, though, that nothing on the ground would have been damaged.',
     'text_sources': [
       'http://www.amsmeteors.org/fireballs/faqf/#2',
       'http://www3.nd.edu/~nsl/Lectures/phys205/pdf/Nuclear_Warfare_8.pdf',
@@ -474,9 +474,9 @@ function inputChanged() {
 
 function getScopeSizeProbability(scope, size) {
   if (scope.id == SCOPE_ME) {
-    return scope.percent_by_size[size.id] * size.number_per_year;
+    return scope.fraction_by_size[size.id] * size.number_per_year;
   } else {
-    return scope.percent * size.number_per_year;
+    return scope.fraction * size.number_per_year;
   }
 }
 
@@ -491,7 +491,7 @@ function displayResult(scopeId, sizeId) {
   var probabilityElement = $('#probability');
   probabilityElement.empty(); // fix for missing drop cap (first letter)
 
-  if (size.id == SIZE_AUDIBLE && scope.id != SCOPE_ME) {
+  if (size.id == SIZE_AUDIBLE) {
     probabilityElement.html(getAudibleMeteorText(scope, size));
   } else {
     var probability_elements = getProbabilityNear(getScopeSizeProbability(scope, size), 2);
@@ -583,11 +583,17 @@ function displayResult(scopeId, sizeId) {
 }
 
 function getAudibleMeteorText(scope, size) {
-  var number_per_year = Math.round(getScopeSizeProbability(scope, size));
-  var text = 'About ' + number_per_year.toLocaleString() +
-             ' fireballs will be so powerful they can be heard from ' +
-             scope.description + ' in the next year.';
-  return text;
+  if (scope.id == SCOPE_ME) {
+    return 'If you were able to pay attention constantly, the chances are about 1 in ' + 
+           Math.round(1/getScopeSizeProbability(scope, size)) + 
+           ' that you would hear a fireball in the next year.';
+  } else {
+    var number_per_year = Math.round(getScopeSizeProbability(scope, size));
+    var text = 'About ' + number_per_year.toLocaleString() +
+               ' fireballs will be so powerful they can be heard from ' +
+               scope.description + ' in the next year.';
+    return text;
+  }
 }
 
 function getProbabilityComparisonText(scope, size, probability_examples) {
