@@ -27,6 +27,12 @@ var probabilities = [
     "source":""
   },
   {
+    "text":"that you are a native speaker of Mandarin",
+    "probability":0.144,
+    "category":"language",
+    "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers"
+  },
+  {
     "text":"that today is Saturday",
     "probability":0.1428571429,
     "category":"time",
@@ -57,6 +63,12 @@ var probabilities = [
     "source":"http://sites.la.utexas.edu/twinproject/facts-and-figures/"
   },
   {
+    "text":"that you are a native speaker of Javanese",
+    "probability":0.0125,
+    "category":"language",
+    "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers"
+  },
+  {
     "text":"that a dollar you paid in tax went to NASA",
     "probability":0.005,
     "category":"",
@@ -85,6 +97,18 @@ var probabilities = [
     "probability":0.001872659176,
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/"
+  },
+  {
+    "text":"that you are a native speaker of Quechua",
+    "probability":0.0013,
+    "category":"language",
+    "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers"
+  },
+  {
+    "text":"that you are a native speaker of Swedish",
+    "probability":0.0013,
+    "category":"language",
+    "source":"http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers"
   },
   {
     "text":"that today is February 29",
@@ -155,6 +179,12 @@ var probabilities = [
   {
     "text":"that you'll get a royal flush in poker on the first five cards dealt",
     "probability":0.000001539077169,
+    "category":"",
+    "source":"http://www.funny2.com/odds.htm"
+  },
+  {
+    "text":"that you will win an Olympic medal",
+    "probability":0.000001510574018,
     "category":"",
     "source":"http://www.funny2.com/odds.htm"
   },
