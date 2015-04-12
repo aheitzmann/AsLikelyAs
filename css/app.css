@@ -79,9 +79,9 @@ h1 {
   table-layout: fixed;
   text-align: center;
   /* border: 1px solid black; */
-} 
+}
 
-.input_slider { 
+.input_slider {
   width: 100%;
 }
 
@@ -95,7 +95,7 @@ h1 {
 }
 
 .slider_label {
-  font-style: 
+  font-style:
 }
 
 #content_section {
