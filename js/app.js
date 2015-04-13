@@ -196,7 +196,7 @@ var probabilities = [
     "category":"death",
     "source":"http://www.washingtonpost.com/wp-srv/special/world/how-deadly-is-ebola/",
     "image_source":"http://upload.wikimedia.org/wikipedia/commons/9/96/ShadowRidgeRoadFire.JPG",
-    "image": "images/probz/house-fire.jpg"
+    "image": "images/probz/fire.jpg"
   },
   {
     "text":"that you will die in an airplane crash",
